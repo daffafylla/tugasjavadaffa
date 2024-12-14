@@ -182,82 +182,23 @@ public class MenuApplication {
         }
     }
 
-    public static void konversiPanjang(Scanner scanner) {
-        System.out.println("Panjang");
-        System.out.println("Silahkan Pilih :");
-        System.out.println(" 1. Kilometer\n 2. Hektometer\n 3. Dekameter\n 4. Desimeter\n 5. Sentimeter\n 6. Milimeter\n 7. Exit");
-        System.out.print("Pilihan Anda: ");
-        int choice = scanner.nextInt();
-        System.out.print("Masukkan nilai dalam meter: ");
-        double meter = scanner.nextDouble();
+    public static void konversiPanjang(Scanner sc) {
+        System.out.println("Konversi Panjang belum diimplementasikan.");
+    } 
 
-        switch (choice) {
-            case 1:
-                System.out.println("Hasil: " + (meter / 1000) + " km");
-                break;
-            case 2:
-                System.out.println("Hasil: " + (meter / 100) + " hm");
-                break;
-            case 3:
-                System.out.println("Hasil: " + (meter / 10) + " dam");
-                break;
-            case 4:
-                System.out.println("Hasil: " + (meter * 10) + " dm");
-                break;
-            case 5:
-                System.out.println("Hasil: " + (meter * 100) + " cm");
-                break;
-            case 6:
-                System.out.println("Hasil: " + (meter * 1000) + " mm");
-                break;
-            case 7:
-                System.out.println("Keluar dari konversi panjang");
-                break;
-            default:
-                System.out.println("Pilihan tidak valid!");
-        }
+    public static void konversiBerat(Scanner sc) {
+        System.out.println("Konversi Berat belum diimplementasikan.");
     }
 
-    public static void konversiBerat(Scanner scanner) {
-        System.out.println("Berat");
-        System.out.println("Silahkan Pilih :");
-        System.out.println(" 1. Kilogram\n 2. Hektogram\n 3. Dekagram\n 4. Desigram\n 5. Centigram\n 6. Milligram\n 7. Exit");
-        System.out.print("Pilihan Anda: ");
-        int choice = scanner.nextInt();
-        System.out.print("Masukkan nilai dalam gram: ");
-        double gram = scanner.nextDouble();
-
-        switch (choice) {
-            case 1:
-                System.out.println("Hasil: " + (gram / 1000) + " kg");
-                break;
-            case 2:
-                System.out.println("Hasil: " + (gram / 100) + " hg");
-                break;
-            case 3:
-                System.out.println("Hasil: " + (gram / 10) + " dag");
-                break;
-            case 4:
-                System.out.println("Hasil: " + (gram * 10) + " dg");
-                break;
-            case 5:
-                System.out.println("Hasil: " + (gram * 100) + " cg");
-                break;
-            case 6:
-                System.out.println("Hasil: " + (gram * 1000) + " mg");
-                break;
-            case 7:
-                System.out.println("Keluar dari konversi berat");
-                break;
-            default:
-                System.out.println("Pilihan tidak valid!");
-            }
-        }
     public static void secretMenu(Scanner sc) {
         System.out.print("Masukkan kode unik (1-10): ");
         int kode = sc.nextInt();
 
-        if (kode == 7) { // Kode unik VIP
+        String kodeString = String.valueOf(kode);
+        int panjangDigit = kodeString.length();
+
+        if ( panjangDigit >= 7 && panjangDigit <= 10 ) {
+            System.out.println("Selamat Darang VIP!"); { // Kode unik VIP
             System.out.println("Selamat Datang VIP!!");
             while (true) {
                 System.out.println("Silahkan Pilih Menu Rahasia");
@@ -298,8 +239,10 @@ public class MenuApplication {
                         System.out.println("Pilihan tidak valid!");
                 }
             }
-        } else {
-            System.out.println("Kode unik salah!");
         }
     }
+    else {
+        System.out.println("Kode unik salah!");
+    }
+}
 }
