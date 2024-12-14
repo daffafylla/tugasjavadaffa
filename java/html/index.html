@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu dan Harga</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background-color: #6c5ce7;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 10px 10px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        .navbar a:hover {
+            background-color: #4e3fc1;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .navbar .menu-icon {
+            display: none;
+            font-size: 2rem;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .navbar ul li {
+            margin: 0 10px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #6c5ce7;
+            }
+
+            .navbar ul.show {
+                display: flex;
+            }
+
+            .navbar .menu-icon {
+                display: block;
+            }
+        }
+
+        .header {
+            background-color: #6c5ce7;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .menu-container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .menu-item h3 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .menu-item p {
+            font-size: 1.2rem;
+            color: #6c5ce7;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #6c5ce7;
+            color: #fff;
+            margin-top: 2rem;
+            border-radius: 0 0 10px 10px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="logo">Logo</a>
+        <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+        <ul>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Tentang</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <header class="header">
+        <h1>Daftar Menu & Harga</h1>
+        <p>Pilih menu favorit Anda dari daftar berikut</p>
+    </header>
+
+    <div class="menu-container">
+        <div class="menu-item">
+            <h3>Nasi Goreng Spesial</h3>
+            <p>Rp 25.000</p>
+        </div>
+        <div class="menu-item">
+            <h3>Mie Ayam</h3>
+            <p>Rp 15.000</p>
+        </div>
+        <div class="menu-item">
+            <h3>Ayam Bakar</h3>
+            <p>Rp 30.000</p>
+        </div>
+        <div class="menu-item">
+            <h3>Sate Ayam</h3>
+            <p>Rp 20.000</p>
+        </div>
+        <div class="menu-item">
+            <h3>Es Teh Manis</h3>
+            <p>Rp 5.000</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Daftar Menu & Harga. Dibuat dengan <span style="color: red;">&#9829;</span> oleh Tim Kreatif. <a href="#">Kembali ke atas</a></p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.navbar ul');
+            menu.classList.toggle('show');
+        }
+    </script>
+
+</body>
+</html>

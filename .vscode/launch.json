@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "JavaScaner",
+            "request": "launch",
+            "mainClass": "JavaScaner",
+            "projectName": "materi java_976cb034"
+        },
+        {
+            "type": "java",
+            "name": "MenuApplication",
+            "request": "launch",
+            "mainClass": "MenuApplication",
+            "projectName": "materi java_976cb034"
+        },
+        {
+            "type": "java",
+            "name": "daffa",
+            "request": "launch",
+            "mainClass": "daffa",
+            "projectName": "materi java_976cb034"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "index",
+            "request": "launch",
+            "mainClass": "index",
+            "projectName": "materi java_976cb034"
+        }
+    ]
+}
