@@ -208,7 +208,7 @@ public class MenuApplication {
 
                 switch (secretMenu) {
                     case 1:
-                        sc.nextLine(); // Clear buffer
+                        sc.nextLine();
                         System.out.print("Masukkan teks: ");
                         String teks = sc.nextLine();
                         System.out.println("Uppercase: " + teks.toUpperCase());
